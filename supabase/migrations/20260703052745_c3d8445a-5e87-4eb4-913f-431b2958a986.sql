@@ -1,0 +1,1 @@
+ALTER TABLE public.appointments ADD COLUMN IF NOT EXISTS ip_hash text; CREATE INDEX IF NOT EXISTS appointments_ip_hash_idx ON public.appointments(ip_hash);
