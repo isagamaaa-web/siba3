@@ -1,4 +1,6 @@
+# =========================================================================
 # Environment Variables & Secrets (CRITICAL SECURITY)
+# =========================================================================
 .env
 .env.local
 .env.development.local
@@ -6,8 +8,45 @@
 .env.production.local
 *.env
 .dev.vars
+*credentials*
+*.pem
+*.key
+*.cert
 
-# Logs
+# AI Platform Cache Directory
+.lovable/
+
+# =========================================================================
+# Dependencies
+# =========================================================================
+node_modules/
+/node_modules
+.pnp
+.pnp.js
+
+# =========================================================================
+# Production & Framework Builds (Vite, Vinxi, TanStack Start, Nitro)
+# =========================================================================
+dist/
+dist-ssr/
+.output/
+.vinxi/
+.tanstack/
+.nitro/
+.vite/
+build/
+*.local
+
+# =========================================================================
+# Databases & Serverless (Supabase Local Dev / Cloudflare Wrangler)
+# =========================================================================
+supabase/.temp/
+supabase/.functions-env
+.wrangler/
+
+# =========================================================================
+# Logs and Diagnostics
+# =========================================================================
 logs
 *.log
 npm-debug.log*
@@ -16,27 +55,14 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# Dependencies
-node_modules/
-/node_modules
-
-# Production & Framework Builds
-dist/
-dist-ssr/
-.output/
-.vinxi/
-.tanstack/
-.nitro/
-*.local
-
-# Wrangler / Cloudflare
-.wrangler/
-
-# Editor directories and files
+# =========================================================================
+# Editor and Operating System Trash
+# =========================================================================
 .vscode/*
 !.vscode/extensions.json
 .idea/
 .DS_Store
+Thumbs.db
 *.suo
 *.ntvs*
 *.njsproj
